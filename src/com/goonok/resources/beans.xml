@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!--
+
+
+dependency injection using getter and setter method -->
+
+	<!--<bean name="address" class="com.goonok.beans.Address">
+		<property name="houseno" value="128"/>
+		<property name="city" value="Gazipur"/>
+		<property name="postcode" value="1710"/>
+	</bean>
+
+	<bean class="com.goonok.beans.Student" id="student">
+		<property name="rollno" value="21300"/>
+		<property name="name" value="Alamin"/>
+		<property name="address" ref="address"/>
+	</bean>
+	
+	-->
+	
+	
+ <!-- Dependency injectio using Constructor Argument-->
+ <bean name="address" class="com.goonok.beans.Address">
+		<constructor-arg name="houseno" value="128"/>
+		<constructor-arg name="city" value="Gazipur"/>
+		<constructor-arg name="postcode" value="1710"/>
+	</bean>
+
+	<bean class="com.goonok.beans.Student" id="student">
+		<constructor-arg name="rollno" value="21300"/>
+		<constructor-arg name="name" value="Alamin"/>
+		<constructor-arg name="address" ref="address"/>
+	</bean>
+ 
+</beans>
